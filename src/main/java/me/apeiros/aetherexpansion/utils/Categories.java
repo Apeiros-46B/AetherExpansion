@@ -5,7 +5,6 @@ import io.github.mooy1.infinitylib.groups.SubGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import lombok.experimental.UtilityClass;
-import me.apeiros.aetherexpansion.AetherExpansion;
 import org.bukkit.Material;
 
 @UtilityClass

@@ -2,19 +2,6 @@ package me.apeiros.aetherexpansion;
 
 import io.github.mooy1.infinitylib.core.AbstractAddon;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.minimessage.MiniMessage;
-import net.kyori.adventure.text.minimessage.markdown.DiscordFlavor;
-import net.kyori.adventure.text.minimessage.transformation.TransformationType;
-import net.kyori.adventure.text.serializer.gson.GsonComponentSerializer;
-import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
-import org.bukkit.NamespacedKey;
-import org.bukkit.enchantments.Enchantment;
-import org.bukkit.inventory.ItemFlag;
-import org.bukkit.inventory.ItemStack;
-
-import java.util.Map;
 
 public class AetherExpansion extends AbstractAddon implements SlimefunAddon {
 
