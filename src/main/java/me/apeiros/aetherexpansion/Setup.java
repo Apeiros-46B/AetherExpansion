@@ -1,12 +1,11 @@
-package me.apeiros.CHANGEME;
+package me.apeiros.aetherexpansion;
 
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 import lombok.experimental.UtilityClass;
-import me.apeiros.CHANGEME.utils.Categories;
-import me.apeiros.CHANGEME.utils.Utils;
+import me.apeiros.aetherexpansion.utils.Categories;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
@@ -18,15 +17,15 @@ import java.util.Map;
 public class Setup {
 
     // Enchantment map (will be used to add enchantments to items)
-    private static Map<Enchantment, Integer> enchs = new HashMap<>();
+    private static final Map<Enchantment, Integer> enchs = new HashMap<>();
 
     // Item constants
-    public static final SlimefunItemStack ITEM = Utils.shine(new SlimefunItemStack(
-            "ITEM", Material.DIAMOND, Utils.legacyParse("<aqua>Magical Diamond"),
-            Utils.legacyParse("<gray>Shimmering")));
+    public static final SlimefunItemStack ITEM = AetherExpansion.shine(new SlimefunItemStack(
+            "ITEM", Material.DIAMOND, AetherExpansion.legacyParse("<aqua>Magical Diamond"),
+            AetherExpansion.legacyParse("<gray>Shimmering")));
 
     // Setup methods
-    public static void setup(ChangeMe p) {
+    public static void setup(AetherExpansion p) {
         // Setup category, researches, listeners, and commands
         Categories.MAIN.register(p);
         setupResearches(p);
@@ -41,15 +40,15 @@ public class Setup {
         }).register(p);
     }
 
-    private static void setupListeners(ChangeMe p) {
+    private static void setupListeners(AetherExpansion p) {
 
     }
 
-    private static void setupCommands(ChangeMe p) {
+    private static void setupCommands(AetherExpansion p) {
 
     }
 
-    private static void setupResearches(ChangeMe p) {
-        new Research(Utils.key("changeme"), 77777, "Change Me!", 30).addItems(ITEM).register();
+    private static void setupResearches(AetherExpansion p) {
+        new Research(AetherExpansion.key("changeme"), 77777, "Change Me!", 30).addItems(ITEM).register();
     }
 }

@@ -1,8 +1,8 @@
-package me.apeiros.CHANGEME.utils;
+package me.apeiros.aetherexpansion;
 
+import io.github.mooy1.infinitylib.core.AbstractAddon;
+import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import lombok.experimental.UtilityClass;
-import me.apeiros.CHANGEME.ChangeMe;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.minimessage.markdown.DiscordFlavor;
@@ -16,11 +16,22 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.Map;
 
-@UtilityClass
-public class Utils {
+import static me.apeiros.aetherexpansion.Setup.setup;
+
+public class AetherExpansion extends AbstractAddon implements SlimefunAddon {
+
+    // what
+
+    // Instance
+    private static AetherExpansion instance;
+
+    // Auto update things
+    public AetherExpansion() {
+        super("Apeiros-46B", "AetherExpansion", "main", "options.auto-update");
+    }
 
     // MiniMessage
-    private static final MiniMessage M = MiniMessage.builder()
+    private static final MiniMessage m = MiniMessage.builder()
             .markdown()
             .markdownFlavor(DiscordFlavor.get())
             .removeDefaultTransformations()
@@ -31,8 +42,28 @@ public class Utils {
             .transformation(TransformationType.HOVER_EVENT)
             .build();
 
+    @Override
+    public void enable() {
+        // Instance
+        instance = this;
+
+        // Setup
+        setup(this);
+    }
+
+    @Override
+    public void disable() {
+        // Clean up instance
+        instance = null;
+    }
+
+    // Instance getter
+    public static AetherExpansion i() {
+        return instance;
+    }
+
     // MiniMessage parse methods
-    public static Component parse(String s) { return M.parse(s); }
+    public static Component parse(String s) { return m.parse(s); }
 
     public static String legacyParse(String s) { return LegacyComponentSerializer.legacySection().serialize(parse(s)); }
 
@@ -58,7 +89,7 @@ public class Utils {
 
     // Key
     public static NamespacedKey key(String s) {
-        return new NamespacedKey(ChangeMe.i(), s);
+        return new NamespacedKey(instance, s);
     }
 
 }

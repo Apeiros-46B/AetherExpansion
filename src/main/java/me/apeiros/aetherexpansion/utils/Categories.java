@@ -1,4 +1,4 @@
-package me.apeiros.CHANGEME.utils;
+package me.apeiros.aetherexpansion.utils;
 
 import io.github.mooy1.infinitylib.groups.MultiGroup;
 import io.github.mooy1.infinitylib.groups.SubGroup;
@@ -12,12 +12,12 @@ public class Categories {
 
     // Category constants
     public static final ItemGroup GENERAL = new SubGroup("changeme_misc",
-            new CustomItemStack(Material.BARRIER, Utils.legacyParse("General")));
+            new CustomItemStack(Material.BARRIER, .legacyParse("General")));
 
     public static final ItemGroup MISC = new SubGroup("changeme_misc",
-            new CustomItemStack(Material.BARRIER, Utils.legacyParse("Miscellaneous")));
+            new CustomItemStack(Material.BARRIER, .legacyParse("Miscellaneous")));
 
     public static final ItemGroup MAIN = new MultiGroup("changeme_main",
-            new CustomItemStack(Material.BARRIER, Utils.legacyParse("<red><underline>Change Me!")), GENERAL, MISC);
+            new CustomItemStack(Material.BARRIER, me.apeiros.aetherexpansion.AetherExpansion.legacyParse("<red><underline>Change Me!")), GENERAL, MISC);
 
 }

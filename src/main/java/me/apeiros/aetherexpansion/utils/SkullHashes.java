@@ -1,4 +1,4 @@
-package me.apeiros.CHANGEME.utils;
+package me.apeiros.aetherexpansion.utils;
 
 import lombok.experimental.UtilityClass;
 
