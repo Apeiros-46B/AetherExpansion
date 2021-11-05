@@ -1,8 +1,7 @@
-# Addon Template
-Addon template for my addons
+# AetherExpansion
+This name is a placeholder atm, will make a better one soon
 
-## Notes
-Change everything that is marked with "changeme"
-
-## Other stuff
-Developer guide: https://github.com/Slimefun/Slimefun4/wiki/Developer-Guide
+## Features
+- Using aether/ether as an energy source
+- Harnessing chaos and entropy
+- TBD
