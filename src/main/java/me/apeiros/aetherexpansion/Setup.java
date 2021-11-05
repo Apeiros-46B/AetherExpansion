@@ -6,6 +6,7 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.api.researches.Research;
 import lombok.experimental.UtilityClass;
 import me.apeiros.aetherexpansion.utils.Categories;
+import me.apeiros.aetherexpansion.utils.Utils;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
@@ -20,9 +21,9 @@ public class Setup {
     private static final Map<Enchantment, Integer> enchs = new HashMap<>();
 
     // Item constants
-    public static final SlimefunItemStack ITEM = AetherExpansion.shine(new SlimefunItemStack(
-            "ITEM", Material.DIAMOND, AetherExpansion.legacyParse("<aqua>Magical Diamond"),
-            AetherExpansion.legacyParse("<gray>Shimmering")));
+    public static final SlimefunItemStack ITEM = Utils.shine(new SlimefunItemStack(
+            "ITEM", Material.DIAMOND, Utils.legacyParse("<aqua>Magical Diamond"),
+            Utils.legacyParse("<gray>Shimmering")));
 
     // Setup methods
     public static void setup(AetherExpansion p) {
@@ -49,6 +50,6 @@ public class Setup {
     }
 
     private static void setupResearches(AetherExpansion p) {
-        new Research(AetherExpansion.key("changeme"), 77777, "Change Me!", 30).addItems(ITEM).register();
+        new Research(Utils.key("changeme"), 77777, "Change Me!", 30).addItems(ITEM).register();
     }
 }

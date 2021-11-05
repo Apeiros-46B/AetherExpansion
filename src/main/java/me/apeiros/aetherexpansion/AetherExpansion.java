@@ -16,11 +16,7 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.Map;
 
-import static me.apeiros.aetherexpansion.Setup.setup;
-
 public class AetherExpansion extends AbstractAddon implements SlimefunAddon {
-
-    // what
 
     // Instance
     private static AetherExpansion instance;
@@ -30,25 +26,13 @@ public class AetherExpansion extends AbstractAddon implements SlimefunAddon {
         super("Apeiros-46B", "AetherExpansion", "main", "options.auto-update");
     }
 
-    // MiniMessage
-    private static final MiniMessage m = MiniMessage.builder()
-            .markdown()
-            .markdownFlavor(DiscordFlavor.get())
-            .removeDefaultTransformations()
-            .transformation(TransformationType.COLOR)
-            .transformation(TransformationType.DECORATION)
-            .transformation(TransformationType.GRADIENT)
-            .transformation(TransformationType.CLICK_EVENT)
-            .transformation(TransformationType.HOVER_EVENT)
-            .build();
-
     @Override
     public void enable() {
         // Instance
         instance = this;
 
         // Setup
-        setup(this);
+        Setup.setup(this);
     }
 
     @Override
@@ -60,36 +44,6 @@ public class AetherExpansion extends AbstractAddon implements SlimefunAddon {
     // Instance getter
     public static AetherExpansion i() {
         return instance;
-    }
-
-    // MiniMessage parse methods
-    public static Component parse(String s) { return m.parse(s); }
-
-    public static String legacyParse(String s) { return LegacyComponentSerializer.legacySection().serialize(parse(s)); }
-
-    public static String jsonParse(String s) { return GsonComponentSerializer.gson().serialize(parse(s)); }
-
-    // Enchant
-    public static ItemStack ench(ItemStack item, Map<Enchantment, Integer> e) {
-        item.addUnsafeEnchantments(e);
-        return item;
-    }
-
-    public static SlimefunItemStack sfEnch(SlimefunItemStack item, Map<Enchantment, Integer> e) {
-        item.addUnsafeEnchantments(e);
-        return item;
-    }
-
-    // Shine enchant
-    public static SlimefunItemStack shine(SlimefunItemStack item) {
-        item.addUnsafeEnchantment(Enchantment.LUCK, 1);
-        item.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-        return item;
-    }
-
-    // Key
-    public static NamespacedKey key(String s) {
-        return new NamespacedKey(instance, s);
     }
 
 }
