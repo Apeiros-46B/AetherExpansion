@@ -1,5 +1,6 @@
-# AetherExpansion
-This name is a placeholder atm, will make a better one soon
+# MagicaeMechanica
+
+---
 
 ## Features
 - Using aether/ether as an energy source for machines and weaponry
