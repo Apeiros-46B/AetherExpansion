@@ -1,25 +1,30 @@
 ## CHANGE this to the name of your plugin.
-name: CHANGEME
+name: MagicaeMechanica
 
 ## CHANGE this to your username.
 author: Apeiros
 
-## CHANGE this to a meaninful but short description of your plugin.
-description: A generic Slimefun4-Addon
+## CHANGE this to a meaningful but short description of your plugin.
+description: A Slimefun4 addon that aims to bridge the gap between magic and technology.
 
 ## CHANGE this to the path of the class that extends JavaPlugin.
-main: me.apeiros.CHANGEME.ChangeMe
+main: me.apeiros.magicaemechanica.MagicaeMechanica
 
 ## You can change this to link to your website or repository. You can also remove this line if you want to.
-website: https://github.com/Apeiros-46B/CHANGEME
+website: https://github.com/Apeiros-46B/MagicaeMechanica
 
 ## This value is automatically replaced by the version specified in your pom.xml file.
 ## Do not change this.
 version: ${project.version}
 
 ## This is the minimum minecraft version required to run your plugin.
-api-version: 1.17
+api-version: 1.18
 
 ## This is required and marks Slimefun as a plugin dependency.
 depend:
 - Slimefun
+
+## Softdepends AlchimiaVitae and FoxyMachines for substitution of overlapping items.
+softdepend:
+- AlchimiaVitae
+- FoxyMachines
