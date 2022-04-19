@@ -1,7 +1,5 @@
 package me.apeiros.magicaemechanica.items;
 
-import java.io.IOException;
-
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
