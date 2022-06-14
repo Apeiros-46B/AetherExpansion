@@ -1,8 +1,8 @@
-package me.apeiros.magicaemechanica;
+package xyz.apeiros.magicaemechanica;
 
 import io.github.mooy1.infinitylib.core.AbstractAddon;
 
-import me.apeiros.magicaemechanica.items.ItemSetup;
+import xyz.apeiros.magicaemechanica.items.Setup;
 
 public class MagicaeMechanica extends AbstractAddon {
 
@@ -20,7 +20,7 @@ public class MagicaeMechanica extends AbstractAddon {
         instance = this;
 
         // Setup
-        ItemSetup.setup(this);
+        Setup.setup(this);
     }
 
     @Override

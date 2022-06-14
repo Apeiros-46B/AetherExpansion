@@ -1,4 +1,4 @@
-package me.apeiros.magicaemechanica.items;
+package xyz.apeiros.magicaemechanica.items;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -10,11 +10,11 @@ import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 
 import lombok.experimental.UtilityClass;
 
-import me.apeiros.magicaemechanica.MagicaeMechanica;
-import me.apeiros.magicaemechanica.utils.ItemGroups;
+import xyz.apeiros.magicaemechanica.MagicaeMechanica;
+import xyz.apeiros.magicaemechanica.utils.ItemGroups;
 
 @UtilityClass
-public class ItemSetup {
+public class Setup {
 
     // Setup methods
     public static void setup(MagicaeMechanica p) {

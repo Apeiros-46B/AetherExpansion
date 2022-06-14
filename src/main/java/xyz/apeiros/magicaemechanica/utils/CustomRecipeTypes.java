@@ -1,4 +1,4 @@
-package me.apeiros.magicaemechanica.utils;
+package xyz.apeiros.magicaemechanica.utils;
 
 import lombok.experimental.UtilityClass;
 

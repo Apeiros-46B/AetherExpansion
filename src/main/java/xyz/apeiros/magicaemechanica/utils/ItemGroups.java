@@ -1,4 +1,4 @@
-package me.apeiros.magicaemechanica.utils;
+package xyz.apeiros.magicaemechanica.utils;
 
 import org.bukkit.Material;
 
@@ -15,16 +15,15 @@ public class ItemGroups {
 
     // Category constants
     public static final ItemGroup GENERAL = new SubGroup("mm_misc",
-            new CustomItemStack(Material.END_CRYSTAL, Utils.legacyParse("<green>General")));
+            new CustomItemStack(Material.END_CRYSTAL, Utils.legacySerialize("<green>General")));
 
     public static final ItemGroup MISC = new SubGroup("mm_misc",
-            new CustomItemStack(Material.NETHER_STAR, Utils.legacyParse("<light_gray>Miscellaneous")));
+            new CustomItemStack(Material.NETHER_STAR, Utils.legacySerialize("<light_gray>Miscellaneous")));
 
     public static final ItemGroup MAIN = new MultiGroup("mm_main",
             new CustomItemStack(Material.BEACON, 
-            Utils.legacyParse(
-                "<" + Utils.COLOR_AETHER + ">Magicae <" 
-                + Utils.COLOR_AETHER_ALT + ">Mechanica")), 
+            Utils.legacySerialize(
+                "<gradient:" + Utils.COLOR_AETHER + ":" + Utils.COLOR_SCULK + ">Magicae Mechanica")),
             GENERAL, MISC);
 
 }
